@@ -13,7 +13,7 @@ If you find our idea or code inspiring, please cite our paper:
 }
 ```
 
-This code also combines [CUDA: Curriculum of Data Augmentation for Long-tailed Recognition.]([https://github.com/facebookresearch/classifier-balancing](https://github.com/sumyeongahn/CUDA_LTR), if you find this code useful, please also cite：
+This code also combines [CUDA: Curriculum of Data Augmentation for Long-tailed Recognition.](https://github.com/sumyeongahn/CUDA_LTR), if you find this code useful, please also cite：
 
 ```bibtex
 @inproceedings{ahn2023cuda,
