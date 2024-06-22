@@ -1,0 +1,31 @@
+coslr: true
+endlr: 0.0
+last: false
+networks:
+  def_file: ./models/ResNet_Ensemble.py
+  params: {depth: 50, num_classes: 1000, groups: 1, width_per_group: 64, normalized: true, scale: 30}
+optim_params: {lr: 0.05, momentum: 0.9, weight_decay: 0.0005}
+dataset:
+  dataset: ImageNet_LT
+  root: ./data/ImageNet_LT/
+  batch_size: 64
+  use_randaug: true
+  aug_prob: 0.5
+  cuda_upgrade: 1
+  cuda_downgrade: 1
+  workers: 16
+training_opt:
+  display_step: 200
+  log_dir: ./logs/ImageNet_LT/models/resnet50
+  log_root: /logs/ImageNet_LT
+  num_classes: 1000
+  num_epochs: 200
+  open_threshold: 0.1
+  milestones: [120, 160]
+  num_dir: ./data/ImageNet_LT/num_shots.npz
+  warmup_epoch: 5
+  bins: 8
+  gamma: 1
+  base_weight: 2
+  mixup:
+    alpha: 0.5
